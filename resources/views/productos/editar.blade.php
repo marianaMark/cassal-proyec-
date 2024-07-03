@@ -16,6 +16,7 @@
 
             <form action="{{route('producto.store')}}" method="POST">
                 @csrf
+                @method('put')
                 <h2 class="text-2xl font-bold ">actializar datos de registro{{$producto->id}}</h2>
                 <p class="my-4 opacity-70">Llene los campos del nuevo producto a registrarse</p>
                 <hr class="my-6">
@@ -28,6 +29,11 @@
                 <label class="uppercase text-sm font-bold opacity-70">Categoria</label>
                 <input type="text" name="categoria" value="{{$producto->nombre}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded">
                 <label class="uppercase text-sm font-bold opacity-70">Categoria_Tabla</label>
+                <select name="categoria_id" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded" required>
+                <option value="{{$categoria_actual->id}}">{{$categoria_actual->nombre}}</option>
+                @foreach($categorias as $cat)
+                <option value="{{$cat->id}}">{{$cat->nombre}}</option>
+                @endforeach
                 <br>
                 <input type="submit" class="py-3 px-6 my-2 bg-blue-500 text-white font-medium rounded hover:bg-indigo-500 cursor-pointer ease-in-out duration-300" value="Guardar cambios">
             </form>

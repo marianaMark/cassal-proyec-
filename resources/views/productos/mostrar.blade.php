@@ -8,7 +8,7 @@
         <h1 class="text-3x1 font-bold tracking-tight text-gray-900">Producto: {{$producto->id}}</h1>
     </div>
 </header>
-<div class='flex items-center justify-center min-h-screen from-teal-100 via-teal-300 to-teal-500 bg-to-br'>
+
 <div class="continer size-1/2 m-auto">
 <div>
     <div class="px-4 sm:px-0">
@@ -33,23 +33,23 @@
           <dt class="text-sm font-medium leading-6 text-gray-900">Descripcion</dt>
           <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{$producto->descripcion}}</dd>
         </div>
-        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm font-medium leading-6 text-gray-900">Categoria_Tabla</dt>
             <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{$producto->categoria_id}} - {{$categoria->nombre}}</dd>
           </div>
+          
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-sm font-medium leading-6 text-gray-900">Operaciones</dt>
             <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
               <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
                 <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-                <button class="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-yellow-500 rounded"><a href="{{route('producto.principal')}}">Volver </a></button>
+                    <button class="bg-blue-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a href="{{route('producto.principal')}}">Volver </a></button>
                 <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"><a href="{{route('producto.editar',$producto)}}">Editar</a></button>
       </dl>
     </div>
   </div>
 </div>
-</div>
-
 
 
 

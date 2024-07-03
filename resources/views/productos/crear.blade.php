@@ -28,6 +28,7 @@
                 <label class="uppercase text-sm font-bold opacity-70">Categoria</label>
                 <input type="text" name="categoria" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded">
                 <label class="uppercase text-sm font-bold opacity-70">Categoria_Tabla</label>
+                
                 <br>
                 <input type="submit" class="py-3 px-6 my-2 bg-blue-500 text-white font-medium rounded hover:bg-indigo-500 cursor-pointer ease-in-out duration-300" value="Guardar">
             </form>
