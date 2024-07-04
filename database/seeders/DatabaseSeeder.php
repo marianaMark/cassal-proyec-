@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Categoria;
 use App\Models\Producto;
+use App\Models\Profile;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Categoria::factory(5)->create();
         Producto::factory(30)->create();
+        Profile::factory(30)->create();
 
 
 

@@ -27,7 +27,7 @@ class perfilesController extends Controller
 
         $categoria=Pro::find($cat_id);
         // return view('productos.mostrar', ['prod'=>$variable]);
-        return view("productos.mostrar", compact('producto','categoria'));
+        return view("perfiles.mostrar", compact('producto','categoria'));
     }
 
     public function store(Request $request)

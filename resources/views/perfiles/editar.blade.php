@@ -10,19 +10,17 @@
     <div class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
         <div class='max-w-md mx-auto space-y-6'>
 
-            <form action="{{route('producto.update', $producto)}}" method="POST">
+            <form action="{{route('perfiles.update', $producto)}}" method="POST">
                 @csrf
                 @method('put')
                 <h2 class="text-2xl font-bold ">Actualizar los datos del producto {{$producto->id}}</h2>
                 <p class="my-4 opacity-70">Modifique los datos que nesecite</p>
                 <hr class="my-6">
-                <label class="uppercase text-sm font-bold opacity-70">Nombre</label>
+                <label class="uppercase text-sm font-bold opacity-70">cargo</label>
                 <input type="text" name="nombre" value="{{$producto->nombre}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded border-2 border-slate-200 focus:border-slate-600 focus:outline-none">
-                <label class="uppercase text-sm font-bold opacity-70">Precio</label>
+                <label class="uppercase text-sm font-bold opacity-70">bibliografia</label>
                 <input type="text" name="precio" value="{{$producto->precio}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded">
-                <label class="uppercase text-sm font-bold opacity-70">Descripcion</label>
-                <input type="text" name="descripcion" value="{{$producto->descripcion}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded">
-                <label class="uppercase text-sm font-bold opacity-70">Categoria</label>
+                
                 <input type="text" name="categoria" value="{{$producto->categoria}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded">
                 <select name="categoria_id" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded" required>
                 <option value="{{$categoria_actual->id}}">{{$categoria_actual->nombre}}</option>

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,6 +21,7 @@ class ProfileFactory extends Factory
         return [
             'cargo' => $this->faker->word(),
             'biografia' => $this->faker->paragraph(),
+            'user_id'=>Profile::inRandomOrder()->first()
         ];
     }
 }
