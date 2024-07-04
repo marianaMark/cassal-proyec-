@@ -22,13 +22,18 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('producto.crear') }}" :active="request()->routeIs('producto.crear')">
-                        {{ __('Registrar') }}
+                    <x-nav-link href="{{ route('roles.principal') }}" :active="request()->routeIs('roles.principal')">
+                        {{ __('Rol') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('producto.crear') }}" :active="request()->routeIs('producto.crear')">
-                        {{ __('categoria') }}
+                    <x-nav-link href="{{ route('categorias.principal') }}" :active="request()->routeIs('categorias.principal')">
+                        {{ __('Categoria') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('perfiles.principal') }}" :active="request()->routeIs('perfiles.principal')">
+                        {{ __('Perfil') }}
                     </x-nav-link>
                 </div>
             </div>
